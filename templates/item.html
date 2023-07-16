@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- Заголовок страницы -->
+<h1>Список пользователей</h1>
+
+<!-- Таблица со списком пользователей -->
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Email</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{% for user in users %}
+<tr>
+<td>{{ user.name }}</td>
+<td>{{ user.email }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+<!-- Кнопка для добавления нового пользователя -->
+<form action="new_user" method=“get”>
+<!--<input type=“text” name=“name” placeholder=“Имя”>-->
+<!--<input type=“email” name=“email” placeholder=“Email”>-->
+<button type=“submit”>Добавить пользователя</button>
+</form>
+</body>
+</html>
+
+
+
+
